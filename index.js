@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/", async (req, res) => {
+app.get("/data", async (req, res) => {
     try {
         const data = await fetch(service1Url);
         const json = await data.text();
