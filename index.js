@@ -10,7 +10,10 @@ app.get("/data", async (req, res) => {
     try {
         const data = await fetch(service1Url);
         const json = await data.text();
-        res.send("Hello World from Service 2! " + json);
+        res.json({
+            message: "Hello World from Service 2!",
+            service1Data: json
+        });
     } catch (err) {
         res.send("Error");
     }
