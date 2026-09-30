@@ -9,10 +9,10 @@ app.use(express.json());
 app.get("/data", async (req, res) => {
     try {
         const data = await fetch(service1Url);
-        const json = await data.text();
+        const json = await data.json();
         res.json({
             message: "Hello World from Service 2!",
-            service1Data: json
+            service1Data: json.message
         });
     } catch (err) {
         res.send("Error");
