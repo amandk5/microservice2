@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^18.0.4",
     "express": "^5.2.1",
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "@amandk5/service1": "0.0.0-pr-2-3"
   }
 }
